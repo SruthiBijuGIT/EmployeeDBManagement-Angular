@@ -1,0 +1,50 @@
+<nav class="navbar">
+  <a href="#" class="brand-logo">Employee Management</a>
+  <ul class="nav-links">
+    <div class="add">
+      <button mat-button (click)="openDialog('addEmployee')">
+        <span class="box-icon box-icon-add-to-queue"></span> 
+        Add Employee
+      </button>
+    </div>  
+  </ul>
+</nav>
+
+<div class="container-mt-5">
+  <table id="employee-table" class="table table-striped table-bordered" frame="hsides" rules="rows">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Department</th>
+        <th>Other Details</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let employee of employees">
+        <td>{{ employee.employee_id }}</td>
+        <td>{{ employee.dept }}</td>
+        <td>{{ employee.other_details }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>
+          <div class="comb">
+            <div class="editemp">
+              <button mat-button (click)="sendEmp(employee);openDialog('editEmployee');"><i class='bx bx-edit-alt'></i></button>
+            </div>
+            <div class="dltemp">
+              <button mat-button (click)="sendEmp(employee);openDialog('deleteEmployee');"><i class='bx bx-trash'></i></button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="button-container">
+    <button class="tohome"><a href="" routerLink="/">Go to Home</a></button>
+  </div>
+</div>
+

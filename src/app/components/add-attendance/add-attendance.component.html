@@ -1,0 +1,52 @@
+<div class="dialog">
+<form action="">
+
+<div>
+    <div class="submit-form">
+      @if (!submitted) {
+
+      <div class="form-group">
+        <label for="employee">Employee name</label>
+        <select
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="attendance.employee_id"
+          name="employee_id"
+        >
+        <option *ngFor="let employee of employees" [value]="employee.employee_id">
+          {{ employee.name }}
+        </option>
+      </select>
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select
+          class="form-control"
+          id="status"
+          required
+          [(ngModel)]="attendance.status"
+          name="status"
+        >
+          <option value="present">Present</option>
+          <option value="absent">Absent</option>
+        </select>
+      </div>
+
+
+      <div class="button-container">
+        <button (click)="saveAttendance()" class="btn btn-success">Submit</button>
+        <button (click)="closeForm()" class="btn btn-success">Cancel</button>
+      </div>
+      } @else {
+      <h4>Attendance was submitted successfully!</h4>
+      <div class="button-center">
+        <button class="btn btn-success" (click)="newAttendance()">Add</button>
+      </div>
+      }
+    </div>
+  </div>
+
+</form>
+</div>

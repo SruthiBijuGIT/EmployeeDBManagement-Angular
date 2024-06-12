@@ -1,0 +1,47 @@
+<!-- home.component.html -->
+<!--nav>
+  <ul>
+    <li><a href="#">Employee Management System</a></li>
+  </ul>
+</nav>
+
+<div class="add">
+  <button mat-button (click)="openDialog('addEmployee')">Add Employee</button>
+</div>
+<app-employee-list></app-employee-list>
+<br>
+<br>
+<br>
+<br>
+
+
+<br>
+<div class="addatt">
+  <button mat-button (click)="openDialog('addAttendance')">Add Attendance</button>
+</div>
+<app-attendance-list></app-attendance-list>
+<br>
+<br>
+<br>
+<div class="export">
+  <button mat-button (click)="openDialog('exportAttendance')">Export CSV</button><br>
+</div>
+<br>
+<div class="comb"></div>-->
+<!-- home.component.html -->
+<!-- home.component.html -->
+<!-- home.component.html -->
+<!-- home.component.html -->
+<div class="homepage">
+  <div class="content">
+    <img src="https://i0.wp.com/juntrax.com/blog/wp-content/uploads/2021/01/Employee-Management-System.jpg?resize=1024%2C585&ssl=1" style="width:1000px; height:380px;" alt="Management System Image" class="header" />
+    <h1>Employee Management System</h1>
+    <p class="subtitle">View and manage employee details!</p>
+    <div class="buttons">
+      <button mat-button class="employee-button" [routerLink]="['/employees']">Employee</button>
+      <button mat-button class="attendance-button" [routerLink]="['/attendance']">Attendance</button>
+    </div>
+  </div>
+</div>
+
+

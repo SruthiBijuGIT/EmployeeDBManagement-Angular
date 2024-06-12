@@ -1,0 +1,11 @@
+dltemp{
+  padding: 30px;
+  border-radius: 20px;
+  background-color: white;
+  width: 600px;
+}
+.button{
+    background-color: rgb(47, 179, 47);
+    color: white;
+    margin: 20px;
+} 
